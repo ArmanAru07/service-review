@@ -11,7 +11,7 @@ const Banner = () => {
 
                 </div>
                 <div className="absolute flex justify-end transform -translate-y1/2 left-24 top-1/4">
-                    <h1 className='text-6xl font-bold text-white'>
+                    <h1 className='lg:text-6xl font-bold text-white'>
                         Online Counselling <br />
                         & Therapy <br /><br />
                         Helped over <br />
