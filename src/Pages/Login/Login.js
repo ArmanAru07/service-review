@@ -1,4 +1,5 @@
 import { GoogleAuthProvider } from 'firebase/auth';
+import { FaGoogle } from "react-icons/fa";
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
@@ -69,8 +70,9 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login"/>
-                            <button onClick={handleGoogleSignIn}>google signIn</button>
+                            <button className="m-3 rounded btn btn-outline btn-primary" onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Google Sign in</button>
                         </div>
+                        <p className='text-danger'>{error}</p>
                     </form>
                     <p className='m-4 text-center'>New to hare Please <Link to='/register' className='text-primary font-bold'>Register</Link></p>
                     
