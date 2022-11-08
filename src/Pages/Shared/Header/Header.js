@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar h-16 mb-2 bg-base-100">
             <div className="flex-1">
                 <Link to={"/"} className="btn btn-ghost normal-case text-xl">daisyUI</Link>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 font-semibold">
+                <Link to={"/"} className="mr-5">Home</Link>
                 <Link to={"/services"} className="mr-5">Services</Link>
-                <Link to={"/review"}>Review</Link>
+                <Link to={"/review"} className="mr-5">Review</Link>
+                <Link to={"/blog"} className="mr-5">Blog</Link>
             </div>
             <div className="flex-none gap-2">
 
