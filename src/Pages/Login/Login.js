@@ -1,14 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
+    const [error, setError] = useState('');
+    const {providerLogin, signIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
 
+    const from = location.state?.from?.pathname || '/';
+
+    //google signIn
+    const googleProvider = new GoogleAuthProvider()
+    const handleGoogleSignIn = () =>{
+        providerLogin(googleProvider)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            navigate('/')
+        })
+        .catch(error => console.error(error))
+    }
+    //login with email and pass
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
 
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                form.reset();
+                setError('');
+                navigate(from, {replace: true});
+            })
+            .catch(error => {
+                console.error(error)
+                setError(error.message);
+            })
         
     }
 
@@ -37,6 +69,7 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login"/>
+                            <button onClick={handleGoogleSignIn}>google signIn</button>
                         </div>
                     </form>
                     <p className='m-4 text-center'>New to hare Please <Link to='/register' className='text-primary font-bold'>Register</Link></p>
