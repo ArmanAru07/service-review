@@ -14,6 +14,8 @@ const Header = () => {
                 <Link to={"/blog"} className="mr-5">Blog</Link>
             </div>
             <div className="flex-none gap-2">
+                <Link to={"/login"} className="mr-5">Login</Link>
+                <Link to={"/register"} className="mr-5">Register</Link>
 
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

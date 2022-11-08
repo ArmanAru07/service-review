@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            {/* three step on counselling */}
+            {/* about section 1*/}
             <div className='border rounded m-3 p-4'>
                 <h1 className='lg:text-6xl text-center'>Online Counselling in Three Simple Steps</h1>
                 <div className='hero mt-4'>
@@ -35,7 +35,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/* counselor */}
+            {/* about section 2 */}
             <div className=" border rounded hero min-h-screen bg-base-200 mb-6">
                 <div className="hero-content flex-col lg:flex-row">
                     <img alt='' src={img} className="max-w-sm rounded-lg shadow-2xl" />
