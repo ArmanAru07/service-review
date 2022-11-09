@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <div className="navbar h-16 mb-2 bg-base-100">
             <div className="flex-1">
-                <Link to={"/"} className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                <Link to={"/"} className="btn btn-ghost normal-case text-xl"> daisyUI</Link>
             </div>
             <div className="flex-1 font-semibold">
                 <Link to={"/"} className="mr-5">Home</Link>
@@ -30,7 +30,7 @@ const Header = () => {
                             <Link to={"/add-services"} className="mr-5">Add Services</Link>
                             <Link to={"/my-review"} className="mr-5">My Review</Link>
                             <div className="dropdown dropdown-end">
-                                <span >{user?.displayName}</span>
+                                <span className='m-4'>{user?.displayName}</span>
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
                                         <img alt='' src={user?.photoURL} />

@@ -70,7 +70,7 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login"/>
-                            <button className="m-3 rounded btn btn-outline btn-primary" onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Google Sign in</button>
+                            <button className="m-3 rounded btn btn-outline btn-primary" onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Sign in with Google</button>
                         </div>
                         <p className='text-danger'>{error}</p>
                     </form>
