@@ -19,7 +19,6 @@ const Services = () => {
                                         <img src={services.image} alt="Shoes" className="rounded-xl" />
                                     </PhotoView>
                                 </PhotoProvider>
-
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">{services.serviceName}</h2>

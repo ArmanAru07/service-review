@@ -29,7 +29,7 @@ const Header = () => {
                 {
                     user?.email ?
                         <>
-                            <Link to={"/add-services"} className="mr-5">Add Services</Link>
+                            <Link to={"/add-service"} className="mr-5">Add Service</Link>
                             <Link to={"/my-review"} className="mr-5">My Review</Link>
                             <div className="dropdown dropdown-end">
                                 <span className='m-4'>{user?.displayName}</span>
