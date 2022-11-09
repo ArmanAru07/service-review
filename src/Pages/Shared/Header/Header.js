@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import logo from '../../../Assets/image/logo.avif';
 
 const Header = () => {
 
@@ -15,7 +16,8 @@ const Header = () => {
     return (
         <div className="navbar h-16 mb-2 bg-base-100">
             <div className="flex-1">
-                <Link to={"/"} className="btn btn-ghost normal-case text-xl"> daisyUI</Link>
+                <img src={logo} alt="" className='w-14' />
+                <Link to={"/"} className="btn btn-ghost normal-case text-xl"> Happy Soul</Link>
             </div>
             <div className="flex-1 font-semibold">
                 <Link to={"/"} className="mr-5">Home</Link>
