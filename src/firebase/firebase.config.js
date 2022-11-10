@@ -14,12 +14,12 @@ import { initializeApp } from "firebase/app";
 // };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBvCqxy_9sK9Sl9oiw0zWnEeByOQRbyffw",
-  authDomain: "service-review-d7144.firebaseapp.com",
-  projectId: "service-review-d7144",
-  storageBucket: "service-review-d7144.appspot.com",
-  messagingSenderId: "496938345088",
-  appId: "1:496938345088:web:719266767fba69abe63c65"
+  apiKey:process.env.REACT_APP_apiKey,
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
