@@ -12,7 +12,7 @@ const MyReview = () => {
         const confirmation = window.confirm("Are you sure you want to DELETE this review");
         if (confirmation) {
             console.log(_id)
-            fetch(`http://localhost:5000/reviews/${_id}`, {
+            fetch(`https://service-review-server-armanaru07.vercel.app/reviews/${_id}`, {
                 method: 'DELETE',
             })
                 .then((response) => response.json())
@@ -32,7 +32,7 @@ const MyReview = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/MyReview?email=${user?.email}`).then((res) => res.json()).then((data) => {
+        fetch(`hhttps://service-review-server-armanaru07.vercel.app/MyReview?email=${user?.email}`).then((res) => res.json()).then((data) => {
 
             setReview(data);
         }).catch((error) => {

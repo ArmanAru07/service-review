@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: () =>fetch('http://localhost:5000/services')
+            loader: () =>fetch('https://service-review-server-armanaru07.vercel.app/services')
         },
         {
             path: '/login',
@@ -31,12 +31,12 @@ const router = createBrowserRouter([
         {
             path: '/services',
             element: <Services></Services>,
-            loader: () =>fetch('http://localhost:5000/servicesAll')
+            loader: () =>fetch('https://service-review-server-armanaru07.vercel.app/servicesAll')
         },
         {
             path: '/services/:id',
             element: <ServiceDetails></ServiceDetails>,
-            loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+            loader: ({params}) => fetch(`https://service-review-server-armanaru07.vercel.app/services/${params.id}`)
         },
         {
             path: '/blog',

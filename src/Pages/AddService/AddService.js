@@ -17,7 +17,7 @@ const AddService = () => {
         }
         console.log(insertService);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://service-review-server-armanaru07.vercel.app/addService', {
 
             method: 'POST', // or 'PUT'
             headers: {

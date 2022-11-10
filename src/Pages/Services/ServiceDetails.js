@@ -42,7 +42,7 @@ const ServiceDetails = () => {
             text, email, serviceName
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://service-review-server-armanaru07.vercel.app/review', {
 
             method: 'POST', // or 'PUT'
             headers: {
