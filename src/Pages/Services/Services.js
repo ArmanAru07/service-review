@@ -22,7 +22,7 @@ const Services = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">{services.serviceName}</h2>
-                                <p>{services.description} </p>
+                                <p>{services.description.slice(0,100)+'...'} </p>
                                 <div className="card-actions">
                                     <h2 className="card-title text-primary">Fee:$ {services.fee}</h2>
                                     <Link to={`/services/${services._id}`}>

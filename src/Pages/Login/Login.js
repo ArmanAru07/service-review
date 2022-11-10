@@ -3,12 +3,14 @@ import { FaGoogle } from "react-icons/fa";
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import useTitle from '../../Hook/useTitle';
 
 const Login = () => {
     const [error, setError] = useState('');
     const {providerLogin, signIn} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('Login')
 
     const from = location.state?.from?.pathname || '/';
 
@@ -57,23 +59,27 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input name='email' type="text" placeholder="email" className="input input-bordered" />
+                            <input name='email' type="text" placeholder="email" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input name='password' type="text" placeholder="password" className="input input-bordered" />
+                            <input name='password' type="text" placeholder="password" className="input input-bordered" required/>
                             <label className="label">
                                 <a href="/" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
+            
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login"/>
+                            <div className="divider">OR</div>
+
                             <button className="m-3 rounded btn btn-outline btn-primary" onClick={handleGoogleSignIn}><FaGoogle></FaGoogle> Sign in with Google</button>
                         </div>
                         <p className='text-danger'>{error}</p>
                     </form>
+                    
                     <p className='m-4 text-center'>New to hare Please <Link to='/register' className='text-primary font-bold'>Register</Link></p>
                     
                 </div>

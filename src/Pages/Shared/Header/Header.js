@@ -34,7 +34,7 @@ const Header = () => {
                             <div className="dropdown dropdown-end">
                                 <span className='m-4'>{user?.displayName}</span>
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
+                                    <div className="w-10 rounded-full bg-base-300">
                                         <img alt='' src={user?.photoURL} />
                                     </div>
                                 </label>
