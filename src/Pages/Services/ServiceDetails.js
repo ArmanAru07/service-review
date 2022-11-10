@@ -25,8 +25,17 @@ const ServiceDetails = () => {
                         <button className="btn btn-outline btn-success m-4 ">Book Appointment</button>
                     </div>
                 </div>
-
             </div>
+            <h1 className="text-5xl text-center font-bold">Ratting</h1>
+            <div className=" border rounded hero bg-base-200">
+                <div className="hero-content flex-col lg:flex-row">
+                    <div>
+                    <input type="text" placeholder="Feedback" className="input input-bordered input-primary w-full max-w-xs" />
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     );
 };
